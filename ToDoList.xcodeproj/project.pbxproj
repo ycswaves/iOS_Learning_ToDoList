@@ -14,6 +14,7 @@
 		0454AB521AC5908300074A6D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0454AB511AC5908300074A6D /* Images.xcassets */; };
 		0454AB551AC5908300074A6D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0454AB531AC5908300074A6D /* LaunchScreen.xib */; };
 		0454AB611AC5908400074A6D /* ToDoListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0454AB601AC5908400074A6D /* ToDoListTests.swift */; };
+		04D3293E1AC68DB400C369C8 /* ToDoTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D3293D1AC68DB400C369C8 /* ToDoTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		0454AB5A1AC5908400074A6D /* ToDoListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0454AB5F1AC5908400074A6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0454AB601AC5908400074A6D /* ToDoListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListTests.swift; sourceTree = "<group>"; };
+		04D3293D1AC68DB400C369C8 /* ToDoTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				0454AB511AC5908300074A6D /* Images.xcassets */,
 				0454AB531AC5908300074A6D /* LaunchScreen.xib */,
 				0454AB461AC5908300074A6D /* Supporting Files */,
+				04D3293D1AC68DB400C369C8 /* ToDoTable.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D3293E1AC68DB400C369C8 /* ToDoTable.swift in Sources */,
 				0454AB4D1AC5908300074A6D /* SecondViewController.swift in Sources */,
 				0454AB491AC5908300074A6D /* AppDelegate.swift in Sources */,
 				0454AB4B1AC5908300074A6D /* FirstViewController.swift in Sources */,
@@ -409,6 +413,7 @@
 				0454AB661AC5908400074A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0454AB671AC5908400074A6D /* Build configuration list for PBXNativeTarget "ToDoListTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				0454AB691AC5908400074A6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

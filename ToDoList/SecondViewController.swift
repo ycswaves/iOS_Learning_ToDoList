@@ -13,9 +13,8 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var item: UITextField!
     
     @IBAction func addItem(sender: AnyObject) {
-        toDoList.append(item.text)
+        toDoList.addItem(item.text)
         item.text = "" //clear text field
-        NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList") //update permanent storage
     }
 
     override func viewDidLoad() {

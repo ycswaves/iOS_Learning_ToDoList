@@ -8,7 +8,7 @@
 
 import UIKit
 
-var toDoList = [String]()
+var toDoList = ToDoTable()
 
 class FirstViewController: UIViewController, UITableViewDelegate {
     
@@ -17,9 +17,6 @@ class FirstViewController: UIViewController, UITableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if NSUserDefaults.standardUserDefaults().objectForKey("toDoList") != nil {
-            toDoList = NSUserDefaults.standardUserDefaults().objectForKey("toDoList") as [String]
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,20 +25,19 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
 
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDoList.count
+        return toDoList.getTotal()
     }
     
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
-        cell?.textLabel?.text = toDoList[indexPath.row]
+        cell?.textLabel?.text = toDoList.getItem(indexPath.row)
         return cell!
     }
     
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
         if editingStyle == UITableViewCellEditingStyle.Delete { //swipe left
-            toDoList.removeAtIndex(indexPath.row)
-            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList") //update permanent storage
+            toDoList.removeItem(indexPath.row)
             todoListTable.reloadData()
         }
     }
