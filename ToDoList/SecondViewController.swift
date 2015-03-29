@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class SecondViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var item: UITextField!
     
@@ -19,6 +19,7 @@ class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.item.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -33,6 +34,7 @@ class SecondViewController: UIViewController {
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
         item.resignFirstResponder()
+        addItem(self)
         return true
     }
 }
