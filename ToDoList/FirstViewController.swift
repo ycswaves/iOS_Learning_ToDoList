@@ -10,7 +10,7 @@ import UIKit
 
 var toDoList = ToDoTable()
 
-class FirstViewController: UIViewController, UITableViewDelegate {
+class FirstViewController: UIViewController {
     
     @IBOutlet weak var todoListTable: UITableView!
     
